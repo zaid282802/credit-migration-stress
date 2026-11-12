@@ -30,7 +30,7 @@ How do corporate default and downgrade probabilities move with the credit cycle,
 
 - Defaults are under-recorded in the ratings file before 1999, so 1990-91 cannot be tested and default thresholds use 1998 to 2006 only.
 - One systematic factor; no industry or regional factors.
-- The yearly default rates have not yet been checked against S&P's published default study.
+- Checked against S&P's published U.S. speculative-grade default rates: correlation 0.90 over 1999 to 2016, with a median ratio of 0.92. The file under-records defaults before 1999, and partly in 2009 to 2014 (2009: 6.8% against S&P's 11.8%). Scored against S&P's rates instead, the out-of-time ranking is unchanged (macro model 3.68, average 2.24).
 
 ## Reproduce
 
@@ -43,6 +43,7 @@ python src/02_cohort_matrices.py
 python src/03_cycle_index.py
 python src/04_duration_matrix.py
 python src/05_stress_projection.py
+python src/06_external_check.py
 EST_START=1998 python src/03_cycle_index.py      # robustness run
 EST_START=1998 python src/05_stress_projection.py
 ```

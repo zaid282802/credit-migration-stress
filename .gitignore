@@ -3,3 +3,4 @@ results/yearly_counts.pkl
 __pycache__/
 *.pyc
 CLAIMS.md
+references/

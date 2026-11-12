@@ -63,4 +63,16 @@ The two methods count almost the same defaults (706 and 705), so the gap is not 
 
 Both conclusions survive: H2 still fails, and the severely adverse number is still an extrapolation (scenario spread 5.24 against a fitted range of 1.69 to 3.19).
 
-**External check: not done.** S&P's study pages refuse automated access (HTTP 403). The table needed is Table 1 of S&P's "Annual U.S. Corporate Default And Rating Transition Study" (yearly speculative-grade default rate), to set against `results/yearly_default_rates.csv`.
+**External check against S&P** (`src/06_external_check.py`, `results/external_check_sp.csv`, `results/external_check_summary.csv`). Source: S&P's 2025 Annual Global Corporate Default And Rating Transition Study, Table 5, U.S. speculative-grade default rate by year. The PDF is in `references/` and is not published.
+
+| Years | Correlation with S&P | Our mean | S&P mean | Median ratio, ours over S&P |
+|---|---|---|---|---|
+| 1986 to 1998 | 0.25 | 1.80% | 4.41% | 0.31 |
+| 1999 to 2016 | 0.90 | 3.77% | 4.40% | 0.92 |
+| 2008 to 2016 | 0.90 | 2.73% | 4.02% | 0.57 |
+
+- 1999 to 2007 matches S&P closely (2001: 10.16% against 10.54%; 2003: 5.69% against 5.60%).
+- Before 1999 the file under-records defaults, as logged in the preregistration. S&P has a 10.71% peak in 1991; the file shows 1.25%.
+- 2009 to 2014 is also low: 6.75% against 11.79% in 2009, and about half of S&P's rate in 2010, 2012, 2013 and 2014. The yearly pattern is right but the level is low, so the file also misses some defaults after 2008. This was not known before the check.
+
+**Is H2 still a failure if S&P's rates are the "actual"?** Yes. This scoring was not preregistered; it was run because of the 2009-2014 gap. Mean absolute error, 2008 to 2016, against S&P's U.S. rates: macro model 3.68, through-the-cycle 2.24, fitted Z 1.19. The ranking is the same as before.
