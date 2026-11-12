@@ -63,6 +63,8 @@ The two methods count almost the same defaults (706 and 705), so the gap is not 
 
 Both conclusions survive: H2 still fails, and the severely adverse number is still an extrapolation (scenario spread 5.24 against a fitted range of 1.69 to 3.19).
 
+**Newey-West check on the macro regression** (`src/08_newey_west.py`, `results/regression_tstats_hac.csv`; added after the results, not preregistered). Residual lag-1 autocorrelation is +0.24 (Durbin-Watson 1.49). Baa spread t-statistic: OLS -7.8, Newey-West -12.4 / -13.9 / -14.5 with 1 / 2 / 3 lags. Unemployment change and GDP growth stay insignificant at every lag (|t| at most 1.1). The HAC errors are smaller than the OLS errors here, so the plain t-statistic was not overstated. With 22 observations HAC errors are themselves imprecise, so the conclusion is only that the Baa spread is the one significant regressor under both methods.
+
 **External check against S&P** (`src/06_external_check.py`, `results/external_check_sp.csv`, `results/external_check_summary.csv`). Source: S&P's 2025 Annual Global Corporate Default And Rating Transition Study, Table 5, U.S. speculative-grade default rate by year. The PDF is in `references/` and is not published.
 
 | Years | Correlation with S&P | Our mean | S&P mean | Median ratio, ours over S&P |

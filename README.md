@@ -45,6 +45,7 @@ python src/04_duration_matrix.py
 python src/05_stress_projection.py
 python src/06_external_check.py
 python src/07_figures.py
+python src/08_newey_west.py
 EST_START=1998 python src/03_cycle_index.py      # robustness run
 EST_START=1998 python src/05_stress_projection.py
 ```

@@ -1,0 +1,5 @@
+,const,d_unrate,gdp_growth,baa_spread
+OLS,5.84,-0.5,0.86,-7.82
+"Newey-West, 1 lag",7.43,-0.51,0.87,-12.43
+"Newey-West, 2 lags",6.91,-0.58,0.85,-13.93
+"Newey-West, 3 lags",7.38,-0.71,1.07,-14.5
