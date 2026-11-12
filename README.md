@@ -1,6 +1,6 @@
 # Rating migration and default probability under stress
 
-How do corporate default and downgrade probabilities move with the credit cycle, and what does a severely adverse scenario imply for them? The hypotheses were written down before any model was fitted ([PREREGISTRATION.md](PREREGISTRATION.md)); every result, including the failed one, is in [RESULTS_LOG.md](RESULTS_LOG.md).
+How do corporate default and downgrade probabilities move with the credit cycle, and what does a severely adverse scenario imply for them? The hypotheses were written down before any model was fitted ([PREREGISTRATION.md](PREREGISTRATION.md)); every result, including the failed one, is in [RESULTS_LOG.md](RESULTS_LOG.md). Four-page write-up: [report/credit_migration_stress.pdf](report/credit_migration_stress.pdf).
 
 ## Results
 
@@ -44,6 +44,7 @@ python src/03_cycle_index.py
 python src/04_duration_matrix.py
 python src/05_stress_projection.py
 python src/06_external_check.py
+python src/07_figures.py
 EST_START=1998 python src/03_cycle_index.py      # robustness run
 EST_START=1998 python src/05_stress_projection.py
 ```
