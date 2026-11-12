@@ -1,0 +1,5 @@
+data/sp_ratings.parquet
+results/yearly_counts.pkl
+__pycache__/
+*.pyc
+CLAIMS.md

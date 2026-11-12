@@ -1,0 +1,14 @@
+rho,0.0268
+coef_const,3.4607
+coef_d_unrate,-0.1184
+coef_gdp_growth,0.1002
+coef_baa_spread,-1.7791
+t_const,5.8373
+t_d_unrate,-0.4999
+t_gdp_growth,0.8596
+t_baa_spread,-7.8214
+r2,0.818
+n_obs,22.0
+oot_mae_macro_model,4.9691
+oot_mae_fitted_z,1.5527
+oot_mae_through_the_cycle,2.3369
